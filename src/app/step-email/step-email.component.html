@@ -1,3 +1,11 @@
-<p>
-  step-email works!
-</p>
+<form [formGroup]="stepForm" novalidate (ngSubmit)="onSubmit()" class="editForm">
+  <div class="form-group">
+    <label class="center-block">Email:
+        <input class="form-control" formControlName="email">
+      </label>
+  </div>
+
+  <div style="margin-bottom: 1em">
+    <button type="submit" [disabled]="stepForm.pristine || !stepForm.valid" class="btn btn-success">Next</button> &nbsp;
+  </div>
+</form>

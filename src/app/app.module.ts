@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,11 @@ import { StepFamilyComponent } from './step-family/step-family.component';
 import { StepAddressComponent } from './step-address/step-address.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './api/in-memory-data-service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StepBaseComponent } from './step-base/step-base.component';
+import { ApplicationDataService } from "app/data/application-data.service";
+import { ApiService } from "app/api/api.service";
+import { ForbiddenValidatorDirective } from './validators/forbidden-validator.directive';
 
 @NgModule({
   declarations: [
@@ -21,17 +26,21 @@ import { InMemoryDataService } from './api/in-memory-data-service';
     StepLandingComponent,
     StepEmailComponent,
     StepFamilyComponent,
-    StepAddressComponent
+    StepAddressComponent,
+    ForbiddenValidatorDirective
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ApiService, ApplicationDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

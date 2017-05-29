@@ -20,6 +20,14 @@ export class ApplicationDataService {
     this.application.email = email;
   }
 
+  saveFamilySituationId(familySituationId: number) {
+    this.application.familySituationId = familySituationId;
+  }
+
+  saveNumberOfChildren(numberOfChildren: number) {
+    this.application.numberOfChildren = numberOfChildren;
+  }
+
   getApplication(): Application {
     return this.application;
   }

@@ -15,8 +15,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './api/in-memory-data-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StepBaseComponent } from './step-base/step-base.component';
-import { ApplicationDataService } from "app/data/application-data.service";
-import { ApiService } from "app/api/api.service";
+import { ApplicationDataService } from 'app/data/application-data.service';
+import { ApiService } from 'app/api/api.service';
 import { ForbiddenValidatorDirective } from './validators/forbidden-validator.directive';
 
 @NgModule({
@@ -44,3 +44,4 @@ import { ForbiddenValidatorDirective } from './validators/forbidden-validator.di
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

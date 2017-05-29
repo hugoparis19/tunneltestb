@@ -5,7 +5,7 @@
 import { BusinessUnit } from './business-units';
 
 export const environment = {
-  envName: 'dev',
+  envName: 'es',
   production: false,
-  businessUnit: BusinessUnit.Fr
+  businessUnit: BusinessUnit.Es
 };

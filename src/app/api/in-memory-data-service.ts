@@ -24,7 +24,14 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 15, label: '5 000€'},
       {id: 16, label: '6 000€'}
     ];
-    return {projectTypes, borrowedAmounts};
+
+    const familySituations = [
+      {id: 0, label: 'choose'},
+      {id: 1, label: 'Célib'},
+      {id: 2, label: 'Marié sans enfant'},
+      {id: 3, label: 'Marié avec enfants'}
+    ];
+    return {projectTypes, borrowedAmounts, familySituations};
   }
 
   constructor() { }

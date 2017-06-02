@@ -1,22 +1,22 @@
-<form [formGroup]="stepForm" novalidate (ngSubmit)="onSubmit()" class="editForm">
-  <div class="form-group">
-    <label class="center-block">projectType:
+
+  <form [formGroup]="stepForm" novalidate (ngSubmit)="onSubmit()" class="editForm">
+    <div class="form-group">
+      <label class="center-block">projectType:
       <select class="form-control" formControlName="projectTypeId">
         <option *ngFor="let projectType of projectTypes | async" [value]="projectType.id">{{projectType.label}}</option>
       </select>
     </label>
-  </div>
-  <!--<div class="form-group">
+    </div>
+    <div class="form-group">
       <label class="center-block">borrowedAmount:
       <select class="form-control" formControlName="borrowedAmountId">
         <option *ngFor="let borrowedAmount of borrowedAmounts | async" [value]="borrowedAmount.id">{{borrowedAmount.label}}</option>
       </select>
     </label>
-    </div>-->
+    </div>
 
-  <yuc-borrowed-amount [group]="stepForm"></yuc-borrowed-amount>
-
-  <div style="margin-bottom: 1em">
-    <button type="submit" [disabled]="stepForm.pristine || !stepForm.valid" class="btn btn-success">Next</button> &nbsp;
-  </div>
-</form>
+    <div style="margin-bottom: 1em">
+      <button type="submit" [disabled]="stepForm.pristine || !stepForm.valid" class="btn btn-success">Next</button>      &nbsp;
+    </div>
+  </form>
+<div>Spain custom</div>

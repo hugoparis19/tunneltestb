@@ -26,6 +26,8 @@
       "environments": {
         "dev": "environments/environment.ts",
         "dev-es": "environments/environment.es.ts",
+        "dev-fr": "environments/environment.fr.ts",
+        "prod-fr": "environments/environment.fr.prod.ts",
         "prod": "environments/environment.prod.ts"
       }
     }

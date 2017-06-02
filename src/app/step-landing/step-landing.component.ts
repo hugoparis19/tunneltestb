@@ -30,14 +30,15 @@ export class StepLandingComponent extends StepBaseComponent implements OnInit {
   createForm() {
     this.stepForm = this.fb.group({
       projectTypeId: [this.currentApplication.projectTypeId, [Validators.required, forbiddenValueValidator(0)]],
-      borrowedAmountId: [this.currentApplication.borrowedAmountId, [Validators.required, forbiddenValueValidator(0)]]
+      components: this.fb.array([])
+      //borrowedAmountId: [this.currentApplication.borrowedAmountId, [Validators.required, forbiddenValueValidator(0)]]
     });
   }
 
   updateApplication() {
     const formModel = this.stepForm.value;
     this.applicationDataService.saveProjectTypeId(formModel.projectTypeId as number);
-    this.applicationDataService.saveBorrowedAmountId(formModel.borrowedAmountId as number);
+    this.applicationDataService.saveBorrowedAmountId(formModel.components[0].borrowedAmountId as number);
   }
 
   getNextRoute(): string {

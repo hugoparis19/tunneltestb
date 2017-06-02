@@ -1,0 +1,11 @@
+<div class="form-group" [formGroup]="currentFormGroup">
+  <div formArrayName="components">
+    <div *ngFor="let address of arrayComponents.controls; let i=index" [formGroupName]="i" >
+    <label class="center-block">borrowedAmount:
+      <select class="form-control" formControlName="borrowedAmountId">
+        <option *ngFor="let borrowedAmount of borrowedAmounts | async" [value]="borrowedAmount.id">{{borrowedAmount.label}}</option>
+      </select>     
+    </label>
+    </div>
+  </div>
+</div>

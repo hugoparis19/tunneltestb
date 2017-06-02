@@ -1,11 +1,15 @@
-<div>
-    <pre>{{ formData | json }}</pre>
-    <div>Title : {{Title}} </div>
-    <div>Environment : {{environmentName}} </div>
+<pre>{{ formData | json }}</pre>
+
+
+<div class="app-content">
+    <md-card>
+        <div>Title : {{Title}} </div>
+        <div>Environment : {{environmentName}} </div>
+    </md-card>
+
+    <yuc-nav-bar></yuc-nav-bar>
     <div>
-        <yuc-nav-bar></yuc-nav-bar>
-        <div>
-            <router-outlet></router-outlet>
-        </div>
+        <router-outlet></router-outlet>
     </div>
+
 </div>

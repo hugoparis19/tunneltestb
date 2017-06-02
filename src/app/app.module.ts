@@ -5,7 +5,7 @@ import { HttpModule, XHRBackend } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdSidenavModule } from '@angular/material';
 import { StepLandingComponent } from './step-landing/step-landing.component';
 import { StepEmailComponent } from './step-email/step-email.component';
 import { StepBaseComponent } from './step-base/step-base.component';
@@ -49,7 +49,8 @@ import { baseDataServiceFactory } from 'app/data/baseDataServiceFactory';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MdSidenavModule
   ],
   providers: [
     ApiService,

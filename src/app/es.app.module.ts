@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, XHRBackend } from '@angular/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModuleEs } from './es.app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MaterialModule, MdSidenavModule } from '@angular/material';
 import { StepLandingComponent } from './step-landing/step-landing.component';
-import { StepEmailComponent } from './step-email/step-email.component';
+import { EsStepEmailComponent } from './step-email/es.step-email.component';
 import { StepBaseComponent } from './step-base/step-base.component';
 import { StepFamilyComponent } from './step-family/step-family.component';
 import { StepAddressComponent } from './step-address/step-address.component';
@@ -33,7 +33,7 @@ import { baseDataServiceFactory } from 'app/data/baseDataServiceFactory';
     NavBarComponent,
     StepLandingComponent,
     EsStepLandingComponent,
-    StepEmailComponent,
+    EsStepEmailComponent,
     StepFamilyComponent,
     StepAddressComponent,
     ForbiddenValidatorDirective,
@@ -47,7 +47,7 @@ import { baseDataServiceFactory } from 'app/data/baseDataServiceFactory';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule,
-    AppRoutingModule,
+    AppRoutingModuleEs,
     BrowserAnimationsModule,
     MdSidenavModule
   ],
@@ -59,5 +59,5 @@ import { baseDataServiceFactory } from 'app/data/baseDataServiceFactory';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule  { }
+export class AppModuleEs { }
 

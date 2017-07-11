@@ -5,6 +5,7 @@
   },
   "apps": [
     {
+      "name": "default",
       "root": "src",
       "outDir": "dist",
       "assets": [
@@ -25,10 +26,36 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "dev-es": "environments/environment.es.ts",
         "dev-fr": "environments/environment.fr.ts",
         "prod-fr": "environments/environment.fr.prod.ts",
         "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "es",
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.es.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "yuc",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.es.ts",
+        "dev-es": "environments/environment.es.ts",
+        "prod-es": "environments/environment.es.prod.ts",
+        "prod": "environments/environment.es.prod.ts"
       }
     }
   ],
